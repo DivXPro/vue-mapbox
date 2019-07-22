@@ -5167,6 +5167,50 @@
             }
           }
         };
+        // CONCATENATED MODULE: ./src/components/layer/CustomLayer.js
+
+        /* harmony default export */ var CustomLayer = {
+          name: "CustomLayer",
+          mixins: [layerMixin],
+          created: function created() {
+            this.$_deferredMount();
+          },
+          methods: {
+            $_deferredMount: function $_deferredMount() {
+              this.$_addLayer();
+              this.$_bindLayerEvents(layerEvents);
+              this.map.off("dataloading", this.$_watchSourceLoading);
+              this.initial = false;
+            },
+            $_addLayer: function $_addLayer() {
+              var existed = this.map.getLayer(this.layerId);
+
+              if (existed) {
+                if (this.replace) {
+                  this.map.removeLayer(this.layerId);
+                } else {
+                  this.$_emitEvent("layer-exists", {
+                    layerId: this.layerId
+                  });
+                  return existed;
+                }
+              }
+
+              var layer = _objectSpread(
+                {
+                  id: this.layerId,
+                  source: this.sourceId
+                },
+                this.layer
+              );
+
+              this.map.addLayer(layer, this.before);
+              this.$_emitEvent("added", {
+                layerId: this.layerId
+              });
+            }
+          }
+        };
         // CONCATENATED MODULE: ./src/main.js
 
         var main_withEvents = withEvents;
@@ -5191,6 +5235,7 @@
         var MglVideoLayer = VideoLayer;
         var MglVectorLayer = VectorLayer;
         var MglRasterLayer = RasterLayer;
+        var MglCustomLayer = CustomLayer;
         var MglMarker = Marker;
         var MglPopup = Popup;
         /* harmony default export */ var main = GlMap;
@@ -5312,6 +5357,13 @@
           "MglRasterLayer",
           function() {
             return MglRasterLayer;
+          }
+        );
+        /* concated harmony reexport MglCustomLayer */ __webpack_require__.d(
+          __webpack_exports__,
+          "MglCustomLayer",
+          function() {
+            return MglCustomLayer;
           }
         );
         /* concated harmony reexport MglMarker */ __webpack_require__.d(

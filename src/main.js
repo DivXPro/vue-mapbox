@@ -14,6 +14,7 @@ import CanvasLayer from "./components/layer/CanvasLayer";
 import VideoLayer from "./components/layer/VideoLayer";
 import VectorLayer from "./components/layer/VectorLayer";
 import RasterLayer from "./components/layer/RasterLayer";
+import CustomLayer from "./components/layer/CustomLayer";
 
 import withEventsMixin from "./lib/withEvents";
 import withSelfEventsMixin from "./components/UI/withSelfEvents";
@@ -46,6 +47,7 @@ export const MglCanvasLayer = CanvasLayer;
 export const MglVideoLayer = VideoLayer;
 export const MglVectorLayer = VectorLayer;
 export const MglRasterLayer = RasterLayer;
+export const MglCustomLayer = CustomLayer;
 
 export const MglMarker = Marker;
 export const MglPopup = Popup;
