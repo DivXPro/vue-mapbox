@@ -1,15 +1,15 @@
 {
-  "name": "vue-mapbox",
+  "name": "vue-mapbox-plus",
   "version": "0.4.1",
   "author": {
-    "name": "soal",
-    "email": "sorrrow.about.alice@gmail.com",
-    "url": "https://github.com/soal"
+    "name": "DivXPro",
+    "email": "wishgood@gmail.com",
+    "url": "https://github.com/DivXPro"
   },
-  "homepage": "https://soal.github.io/vue-mapbox",
+  "homepage": "https://DivXPro.github.io/vue-mapbox",
   "repository": {
     "type": "git",
-    "url": "https://github.com/soal/vue-mapbox.git"
+    "url": "https://github.com/DivXPro/vue-mapbox.git"
   },
   "private": false,
   "main": "dist/vue-mapbox.umd.js",
