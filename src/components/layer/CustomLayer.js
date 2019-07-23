@@ -27,13 +27,8 @@ export default {
           return existed;
         }
       }
-      let layer = {
-        id: this.layerId,
-        source: this.sourceId,
-        ...this.layer
-      };
 
-      this.map.addLayer(layer, this.before);
+      this.map.addLayer(this.layer, this.before);
       this.$_emitEvent("added", { layerId: this.layerId });
     }
   }
